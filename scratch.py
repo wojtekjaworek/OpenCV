@@ -38,7 +38,7 @@ def webcam():
         canny = cv.Canny(frame, threshold_low, threshold_high)
         cv.imshow('WINDOW', canny)
 
-
+   
 
 
 
