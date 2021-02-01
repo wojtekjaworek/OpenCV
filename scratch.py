@@ -11,7 +11,7 @@ def nothing(x):
     pass
 
 
-
+#
 cam = cv.VideoCapture(0)
 if cam is None or not cam.isOpened():
     print('Warning: unable to open video source')
@@ -71,6 +71,9 @@ plt.show()
 
 # canny edge detection
 
+img = cv.imread('photo.jpg')
+img = cv.cvtColor(img, cv.COLOR_BGR2RGB)
+
 
 def resize_img(frame, scale_percent):
     width = int(frame.shape[1] * scale_percent / 100)
@@ -107,6 +110,8 @@ while True:
         break
 
 cv.destroyAllWindows()
+
+
 
 # high and low pass filters
 
